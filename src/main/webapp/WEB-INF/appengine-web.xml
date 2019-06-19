@@ -1,0 +1,10 @@
+<appengine-web-app xmlns="http://appengine.google.com/ns/1.0">
+  <threadsafe>true</threadsafe>
+  <runtime>java8</runtime>
+  <env-variables>
+    <env-var name="CLOUD_SQL_CONNECTION_NAME" value="trafficbuz:asia-east1:trafficbuzdb" />
+    <env-var name="DB_USER" value="root" />
+    <env-var name="DB_PASS" value="root" />
+    <env-var name="DB_NAME" value="trafficbuzdb" />
+  </env-variables>
+</appengine-web-app>

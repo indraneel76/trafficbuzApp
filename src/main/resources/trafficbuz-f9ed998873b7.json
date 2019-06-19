@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "trafficbuz",
+  "private_key_id": "f9ed998873b75c850ecbf163eb0dbbf927147ab3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDfAuir5wsnN5SG\n3TRkTBabPZRrwHBEONCGHMsOtW1zUCIcxkq89GH+P6SMlyCchtbcJfNmxaS6DB4D\nxFpbhy/keOg/m+qAxaePq2DKO+D750ELdh4zZ4Js4L37We9RpvFSwXIOosPr597B\nNyTh0dchbO44MH+qDV9BnKhqHxn82vU88fCV/rizaYA2+zSVN1z/jV3ZVcOUtREJ\nnc6AJTi7wN09rjoUOOpBmkA6RxocrGg19qMtJFSmdTwjyJNhJJAsV5bECMQ2s7CD\n0NDDZ2GwvuNbBNj/WL7o89zvWEthNlr6yeHTTeS4kwrSFIG1xWDvJHEt2WLp7tGk\nPQpKe8pfAgMBAAECggEACzZxh2JPyiV+Jyryqhy1qES4Dfp4SpEGuJXn01hlskra\ncQYhSakJ6K2/f4tO47/XbrmaKG+SIQHGwo66GLVn2YqgtsE6naxFomO0ZqA/51QQ\n9HTezA8Nj9B1WbCdNHnhBhwQa+vDT3AL+aMxpgiWBfa2byA1H9IzTDCGh56cgMnt\nF3XQoxBdSCH8cgA/ELLLVjeiVrd116dr2wnaMTTGa3BBGJSbRZrmZjMLsuJbcOTG\nUEr8Jl3Y2cMpsvGU7+pgUyG8e3h/ZW0vUnO4dQJdS1bz4HGoIOlO0S5r/sBfmCND\njUkAmpSZ5OdjMSKH4eWtokqdwYOR1ImwBGsLMRuVoQKBgQD0hgrIjkBrw0bZ8Vph\nURch/bEyVdUbEIqSt1GyApMFlEfcrjoB+0wyePHv2cuxhfRqYdY7i7U8KyY4VUVx\n8EVkrEl5KJBSUuH9GxG3cKzac1rUmu/2pny4/ITPan6IEanaO0Zf7khYG3GOkU2h\nrOdlp4MpFKdlLF5aHQK7APYDIQKBgQDpemWHacwWUEnStFytX2gJpDSl5YSLxve2\nunUJXb5bgYLL3he9RE1Dqq5F5N8DrfhvjDFGp4xqOEKaUy/U6lU/4MKjPEjuezWj\njqwGaSwC7HrL6bS0Zy7Q/FWKdsCMccRrA5sSbLttGBgN0jZ+HE75HVTAkF0bN0Ya\nvcUcpOWdfwKBgQC312OaH+FtY/cL+vrhue7zfmJQHtpHK+uTnUJN3MOe6ToSP+ea\n/83tEKONmikcQkNeDEreoA5Vu3dT2UCKBoSVyTbAYfAIBQqlmkl6qrs6zonW2Npb\njhatmiVcMIwLT4RtcC1cCLHZlGCPOM2uJWogMo5ZP48PcQlLJQ6dfH56IQKBgQDK\n5bP/tsBGD+XntxfnDsdBwbKDDO9f7TvuTyFQT2gS63y4IDxvHUEr8dLbKKdp8jC4\n95MG/Kn40QWISYyCslX9WhyrcMNMhEQ768uxEorNy6Z3OJTyRc0YjoDkAIkaQ+/W\ns956Z4WFq++Ta0Ax3fX/ZS723T4cXa+No6b9Wou0jwKBgE+Iy3r7MKdfBjQIYmvV\n0aVTz2FtYrBIqntgx4MLdYA0HIx0mHfRrGoiZmmoaQ0V9LfFfwCJdtZV0oecwDvZ\n73RGC88CfZV5RCU7R9YNmc1UWkMXHI8wLgbcv9YkYNpSr4/QZkWQuC7au2swGn0O\nazhzN95g8p9wlXZEYo3Xl1/v\n-----END PRIVATE KEY-----\n",
+  "client_email": "accessmysql@trafficbuz.iam.gserviceaccount.com",
+  "client_id": "108301293946544633778",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/accessmysql%40trafficbuz.iam.gserviceaccount.com"
+}
