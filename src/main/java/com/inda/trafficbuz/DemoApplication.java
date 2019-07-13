@@ -16,6 +16,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -24,6 +25,7 @@ import com.inda.trafficbuz.config.ConnectionPool;
 @SpringBootApplication
 @EnableAspectJAutoProxy
 @ComponentScan("com.inda.trafficbuz")
+//@EnableJpaRepositories(basePackages = { "com.inda.trafficbuz.repository" })
 
 @RestController
 public class DemoApplication {
@@ -45,12 +47,12 @@ public class DemoApplication {
 	      ResultSet rs = stmt.executeQuery(sql);
 	      //STEP 5: Extract data from result set
 	      while(rs.next()){
-	         String userid = rs.getString("userid");
+	         String username = rs.getString("username");
 	         String password = rs.getString("password");
 
-	         System.out.print(", userid: " + userid);
+	         System.out.print(", username: " + username);
 	         System.out.println(", password: " + password);
-	         returnString=returnString+":"+userid+"|"+password ;
+	         returnString=returnString+":"+username+"|"+password ;
 	      }
 	      //STEP 6: Clean-up environment
 	      rs.close();

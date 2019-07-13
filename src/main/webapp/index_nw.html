@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html ng-app="trafficbuz">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>RightTimeToLeave</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <meta name="google-signin-client_id" content="785351027394-ggqcb7hf5rkl6iun8f7kus0dbs9drr55.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+   <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.js"></script> --> 
+    <script type="text/javascript" src="assets/js/angular.js"></script>
+    <script type="text/javascript" src="assets/js/angular-route.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/MainController.js"></script>
+     <script type="text/javascript" src="assets/js/ContactUsController.js"></script>
+   <!--<script type="text/javascript" src="assets/js/controller.js"></script> -->
+</head>
+
+<body>
+
+   <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar">
+       <div class="container"><a class="navbar-brand logo" href="#">RightTimeToLeave</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+           <div class="collapse navbar-collapse"
+                id="navcol-1">
+               <ul class="nav navbar-nav ml-auto">
+                   <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html">Home</a></li>
+                   <li class="nav-item" role="presentation"><a class="nav-link" href="#features">Features</a></li>
+                   <li class="nav-item" role="presentation"><a class="nav-link" href="#pricing">Pricing</a></li>
+                   <li class="nav-item" role="presentation"><a class="nav-link" href="about-us.html">About Us</a></li>
+                   <li class="nav-item ng-scope" role="presentation"><a class="nav-link" href="#!contactus">Contact Us</a></li>
+                   <li class="nav-item ml-auto" role="presentation" ng-if="user"><small class="nav-link">Welcome {{user.emailid}}</small></li>
+                   <li class="nav-item g-signin2" role="presentation" data-longtitle="true" data-onsuccess="onSignIn">Test</li>
+                   <li class="nav-item ng-scope" role="presentation"><a class="nav-link" href="#" onclick="signOut();>Logout</a></li>
+               </ul>
+
+           </div>
+       </div>
+   </nav>
+   
+   <div ng-view="/main></div>
+   
+    <footer class="footer bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 my-auto h-100 text-center text-lg-left">
+                    <ul class="list-inline mb-2">
+                        <li class="list-inline-item"><a href="#">About</a></li>
+                        <li class="list-inline-item"><span>⋅</span></li>
+                        <li class="list-inline-item"><a href="#">Contact</a></li>
+                        <li class="list-inline-item"><span>⋅</span></li>
+                        <li class="list-inline-item"><a href="#">Terms of &nbsp;Use</a></li>
+                        <li class="list-inline-item"><span>⋅</span></li>
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                    </ul>
+                    <p class="text-muted small mb-4 mb-lg-0">© RightTimeToLeave 2019. All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-6 my-auto h-100 text-center text-lg-right">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-facebook fa-2x fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="#"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+    <script>
+      function onSignIn(googleUser) {
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+        var xhr = new XMLHttpRequest();
+
+        xhr.open('POST', '/tokensignin');
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onload = function() {
+        console.log('Signed in as: ' + xhr.responseText);
+        };
+        xhr.send('idtoken=' + id_token);
+
+      }
+    </script>
+<script>
+// angular.module("trafficbuzapp", [])
+
+//   .controller("indexController", function($scope) {
+      //    $scope.user = {};
+      //$scope.user.emailid = "nouser@nodomain.com";
+//   });
+
+</script>
+<script>
+  function signOut() {
+    var auth2 = gapi.auth2.getAuthInstance();
+    auth2.signOut().then(function () {
+      console.log('User signed out.');
+    });
+  }
+</script>
+</body>
+
+</html>

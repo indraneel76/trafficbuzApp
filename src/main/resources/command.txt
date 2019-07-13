@@ -1,2 +1,9 @@
 mvnw -DskipTests spring-boot:run
 mvnw -DskipTests appengine:deploy
+
+
+  set CLOUD_SQL_CONNECTION_NAME=trafficbuz:asia-east1:trafficbuzdb
+  set DB_USER=root
+  set DB_PASS=root
+  set DB_NAME=trafficbuzdb
+  set GOOGLE_APPLICATION_CREDENTIALS=C:\git\startup\javaworkspace2\trafficbuzapp\src\main\resources\trafficbuz-f9ed998873b7.json
