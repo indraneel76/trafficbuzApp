@@ -20,7 +20,7 @@ import com.zaxxer.hikari.HikariDataSource;
 @Configuration
 @EnableTransactionManagement
 @ComponentScan(basePackages="com.inda.trafficbuz.repository")
-public class SpringJdbcConfiguration {
+public class JpaConfiguration {
 
 	 private static final String CLOUD_SQL_CONNECTION_NAME = System.getenv(
 		      "CLOUD_SQL_CONNECTION_NAME");
